@@ -4,12 +4,13 @@ const mongoose = require("mongoose");
 const app = express();
 require('dotenv').config()
 
-// importing models
-const Person = require("./models/Person");
-
 // reading JSON / middlewares
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+// routes configuration
+const personRoutes = require("./routes/personRoutes");
+app.use("/person", personRoutes);
 
 // initial route / endpoint
 app.get('/', (req, res) => {
