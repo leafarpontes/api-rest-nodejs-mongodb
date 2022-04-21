@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 const app = express();
 require('dotenv').config()
 
+// importing models
+const Person = require("./models/Person");
+
 // reading JSON / middlewares
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
