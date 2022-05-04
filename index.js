@@ -10,7 +10,7 @@ app.use(express.json());
 
 // routes configuration
 const personRoutes = require("./routes/personRoutes");
-app.use("/person", personRoutes);
+app.use("/people", personRoutes);
 
 // initial route / endpoint
 app.get('/', (req, res) => {
